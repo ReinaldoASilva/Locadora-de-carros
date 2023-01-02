@@ -56,7 +56,7 @@ while True:
             print('Não tem carros para devolução')
         else:
             print('Segue a lista de carros alugados. Deseja devolver?')
-            mostrar_lista_de_carros(carros)
+            mostrar_lista_de_carros(alugados)
             print('')
             print('Escolha o código do carro que deseja devolver:')
             cod = int(input())
