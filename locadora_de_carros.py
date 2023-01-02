@@ -1,6 +1,4 @@
 import os
-
-#cliente = { '0': 'Mostrar portifólio |', '1': 'Alugar um carro |', '2': 'Devolver um carro |'}
 carros = [
     ('Chevrolet Tracker', 120),
     ('Chevrolet Onix', 90),
@@ -9,7 +7,7 @@ carros = [
     ('Fiat Uno', 60),
     ('Chevrolet Mobi', 70),
     ('Chevrolet Pulse', 130)
-]
+    ]
 
 alugados = []
 
@@ -20,7 +18,6 @@ def mostrar_lista_de_carros(lista_de_carros):
 
 while True:
     os.system('clear')
-
     print('==================')
     print('Bem vindo a locadora de Veículos')
     print('==================')
@@ -47,6 +44,7 @@ while True:
         print('')
         print('O aluguel totalizaria R${}. Deseja alugar? '.format(dias * carros[cod_car][1]))
         print('')
+
         print('0 - SIM | 1 - NÃO')
         conf = int(input())
         if conf == 0:
@@ -58,18 +56,17 @@ while True:
             print('Não tem carros para devolução')
         else:
             print('Segue a lista de carros alugados. Deseja devolver?')
+            mostrar_lista_de_carros(carros)
             print('')
             print('Escolha o código do carro que deseja devolver:')
             cod = int(input())
             if conf == 0:
                 print(' Obrigado por devolver o carro {}'.format(alugados[cod][0]))
-                carros.append(alugados.pop(cod))
-        
-
-        print('')
-        print('============')
-        print('0 para CONTINUAR | 1 para SAIR')
-        if float(input()) == 1:
+                carros.append(alugados.pop(cod)) 
+    print('')
+    print('============')
+    print('0 para CONTINUAR | 1 para SAIR')
+    if float(input()) == 1:
             break
 
 
